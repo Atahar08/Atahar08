@@ -11,7 +11,7 @@
 
 <!-- PDF Download Button -->
 <div style="text-align:center; margin-bottom: 30px;">
-  <a href="https://github.com/YOUR-USERNAME/YOUR-REPO/raw/BRANCH/resume.pdf" 
+  <a href="https://github.com/YOUR-USERNAME/YOUR-REPO/raw/main/resume.pdf" 
      download
      style="
        background-color: #007bff;
@@ -39,7 +39,7 @@
 ✉️ atahar8080@gmail.com  
 [LinkedIn Profile](https://www.linkedin.com/in/ataharhossain/)
 
- </td>
+</td>
     <td align="right" width="30%">
       <img src="https://github.com/Atahar08/Atahar-s-Resume/blob/main/Gemini_Generated_Image_qy79b8qy79b8qy79.png?raw=true" 
            alt="Atahar Hossain" width="180"/>
@@ -96,3 +96,48 @@ BSc in Computer Science & Engineering
 - Assistant Treasurer, Cultural & Sports Club, FSET (Faculty of Science Engineering & Technology), University of Science & Technology Chittagong  
 
 </div>
+
+---
+
+### ✅ How to set up automatic PDF generation:
+
+1. **Create GitHub Action:**  
+
+Create a folder `.github/workflows/` in your repo and add a file `generate_pdf.yml`:
+
+```yaml
+name: Generate Resume PDF
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: |
+        npm install -g markdown-pdf
+
+    - name: Convert README to PDF
+      run: |
+        markdown-pdf README.md -o resume.pdf
+
+    - name: Commit PDF
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add resume.pdf
+        git commit -m "Update resume PDF [skip ci]" || echo "No changes to commit"
+        git push

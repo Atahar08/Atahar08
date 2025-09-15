@@ -97,47 +97,4 @@ BSc in Computer Science & Engineering
 
 </div>
 
----
 
-     ### ✅ How to set up automatic PDF generation:
-
-    1. **Create GitHub Action:**  
-
-     Create a folder `.github/workflows/` in your repo and add a file `generate_pdf.yml`:
-
-    ```yaml
-     name: Generate Resume PDF
-
-    on:
-     push:
-    branches:
-      - main  # or your default branch
-
-    jobs:
-     build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-
-    - name: Install dependencies
-      run: |
-        npm install -g markdown-pdf
-
-    - name: Convert README to PDF
-      run: |
-        markdown-pdf README.md -o resume.pdf
-
-    - name: Commit PDF
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add resume.pdf
-        git commit -m "Update resume PDF [skip ci]" || echo "No changes to commit"
-        git push

@@ -99,22 +99,22 @@ BSc in Computer Science & Engineering
 
 ---
 
-### ✅ How to set up automatic PDF generation:
+     ### ✅ How to set up automatic PDF generation:
 
-1. **Create GitHub Action:**  
+    1. **Create GitHub Action:**  
 
-Create a folder `.github/workflows/` in your repo and add a file `generate_pdf.yml`:
+     Create a folder `.github/workflows/` in your repo and add a file `generate_pdf.yml`:
 
-```yaml
-name: Generate Resume PDF
+    ```yaml
+     name: Generate Resume PDF
 
-on:
-  push:
+    on:
+     push:
     branches:
       - main  # or your default branch
 
-jobs:
-  build:
+    jobs:
+     build:
     runs-on: ubuntu-latest
 
     steps:

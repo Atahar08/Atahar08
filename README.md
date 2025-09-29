@@ -19,8 +19,8 @@
 
 </td>
     <td align="right" width="30%">
-      <img src="https://github.com/Atahar08/My-reswume/blob/main/Gemini_Generated_Image_ticmceticmceticm.png?raw=true?raw=true" 
-           alt="Atahar Hossain" width="180"/>
+      <img src="https://raw.githubusercontent.com/Atahar08/Atahar08/main/Gemini_Generated_Image_ticmceticmceticm.png" 
+     alt="Atahar Hossain" width="180"/>
     </td>
   </tr>
 </table>

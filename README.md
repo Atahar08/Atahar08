@@ -1,30 +1,4 @@
-<div style="
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px;
-    background: white;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-">
 
-<!-- PDF Download Button -->
-<div style="text-align:center; margin-bottom: 30px;">
-  <a href="https://github.com/YOUR-USERNAME/YOUR-REPO/raw/main/resume.pdf" 
-     download
-     style="
-       background-color: #007bff;
-       color: white;
-       padding: 12px 24px;
-       border-radius: 6px;
-       text-decoration: none;
-       font-weight: bold;
-       font-size: 16px;
-     ">
-    Download PDF
-  </a>
-</div>
 
 <!-- Header Table -->
 <table width="100%">

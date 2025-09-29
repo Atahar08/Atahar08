@@ -1,0 +1,24 @@
+name: Generate PDF from README
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install Pandoc
+        run: sudo apt-get install pandoc -y
+
+      - name: Convert README.md to PDF
+        run: pandoc README.md -o resume.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume-pdf
+          path: resume.pdf

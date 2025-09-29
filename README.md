@@ -1,7 +1,7 @@
-<!-- Download Resume Button -->
-<a href="https://github.com/Atahar08/My-reswume/releases/latest/download/resume.pdf" target="_blank">
+<a href="https://github.com/Atahar08/Atahar08/releases/latest/download/resume.pdf" target="_blank">
   <img src="https://img.shields.io/badge/Download-PDF-red?style=for-the-badge&logo=adobeacrobatreader"/>
 </a>
+
 
 
 <!-- Header Table -->

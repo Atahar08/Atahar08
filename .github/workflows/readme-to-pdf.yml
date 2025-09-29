@@ -17,8 +17,10 @@ jobs:
       - name: Convert README.md to PDF
         run: pandoc README.md -o resume.pdf
 
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: resume-pdf
-          path: resume.pdf
+          tag_name: latest
+          files: resume.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

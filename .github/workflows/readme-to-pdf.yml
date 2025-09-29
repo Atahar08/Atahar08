@@ -3,6 +3,10 @@ name: Generate PDF from README
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:   # allows manual trigger
+
+permissions:
+  contents: write      # needed to create/update releases
 
 jobs:
   build:
@@ -17,10 +21,11 @@ jobs:
       - name: Convert README.md to PDF
         run: pandoc README.md -o resume.pdf
 
-      - name: Upload to Release
+      - name: Upload PDF to Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
+          release_name: "Latest Resume"
           files: resume.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -35,8 +35,7 @@ Cybersecurity enthusiast with hands-on experience in vulnerability assessment, p
 ## Skills  
 - Cyber Security  
 - Digital Marketing  
-- Canva  
-- Microsoft Word & PowerPoint  
+  
 
 ---
 

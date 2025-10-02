@@ -1,26 +1,26 @@
-name: Generate PDF from README
+name: Generate PDF Resume
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:   # allows manual trigger
+  workflow_dispatch:
 
 permissions:
-  contents: write      # needed to create/update releases
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install Pandoc + wkhtmltopdf
+      - name: Install Pandoc & wkhtmltopdf
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc wkhtmltopdf
+          sudo apt-get install -y pandoc wkhtmltopdf fonts-dejavu
 
-      - name: Convert README.md to PDF with A4 + balanced margins
+      - name: Convert README.md to polished PDF
         run: pandoc README.md -o resume.pdf \
           --pdf-engine=wkhtmltopdf \
           --resource-path=. \
@@ -28,14 +28,14 @@ jobs:
           --pdf-engine-opt="--margin-top 20mm" \
           --pdf-engine-opt="--margin-right 15mm" \
           --pdf-engine-opt="--margin-bottom 20mm" \
-          --pdf-engine-opt="--margin-left 15mm"
-
-
-      - name: Upload PDF to Release
-        uses: softprops/action-gh-release@v1
+          --pdf-engine-opt="--margin-left 15mm" \
+          --variable mainfont="DejaVu Sans" \
+          --variable fontsize=11pt \
+          --variable linestretch=1.15 \
+          --variable geometry:margin=15mm
+          
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v3
         with:
-          tag_name: latest
-          release_name: "Latest Resume"
-          files: resume.pdf
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: resume
+          path: resume.pdf

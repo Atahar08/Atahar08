@@ -20,15 +20,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc wkhtmltopdf
 
-      - name: Convert README.md to PDF with A4 size + margins
+      - name: Convert README.md to PDF with A4 + balanced margins
         run: pandoc README.md -o resume.pdf \
           --pdf-engine=wkhtmltopdf \
           --resource-path=. \
-          -V papersize:a4 \
-          -V margin-top=2.54cm \
-          -V margin-right=2.54cm \
-          -V margin-bottom=2.54cm \
-          -V margin-left=2.54cm
+          --variable papersize:a4 \
+          --pdf-engine-opt="--margin-top 20mm" \
+          --pdf-engine-opt="--margin-right 15mm" \
+          --pdf-engine-opt="--margin-bottom 20mm" \
+          --pdf-engine-opt="--margin-left 15mm"
+
 
       - name: Upload PDF to Release
         uses: softprops/action-gh-release@v1

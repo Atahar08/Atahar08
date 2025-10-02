@@ -20,8 +20,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc wkhtmltopdf
 
-      - name: Convert README.md to PDF
-        run: pandoc README.md -o resume.pdf --pdf-engine=wkhtmltopdf --resource-path=.
+      - name: Convert README.md to PDF with margins
+        run: pandoc README.md -o resume.pdf \
+          --pdf-engine=wkhtmltopdf \
+          --resource-path=. \
+          -V margin-top=2.54cm \
+          -V margin-right=2.54cm \
+          -V margin-bottom=2.54cm \
+          -V margin-left=2.54cm
 
       - name: Upload PDF to Release
         uses: softprops/action-gh-release@v1
@@ -31,4 +37,3 @@ jobs:
           files: resume.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-

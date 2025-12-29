@@ -48,7 +48,7 @@ May 2025 – November 2025
 - Analyzed system and user activity data to detect trends, anomalies, and indicators of social engineering–based threats such as phishing.
 - Supported documentation of security practices, incident observations, and risk mitigation processes.
 
-** Key Skills Gained:
+Key Skills Gained:
 - Data Privacy & Compliance (GDPR/CCPA)
 - Web Application & System Security Exposure
 - Log Monitoring & Anomaly Detection

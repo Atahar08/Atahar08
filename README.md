@@ -41,8 +41,8 @@ Cybersecurity enthusiast with hands-on experience in vulnerability assessment, p
 
 ## Experience  
 
-### Cyber Security Intern – Brain Machine
-April 2025 – September 2025
+### Cyber Security Intern – Brain Machine AI
+May 2025 – November 2025
 - Assisted in maintaining data privacy and regulatory compliance (GDPR/CCPA), reinforcing secure handling of sensitive user information.
 - Monitored web platforms, CMS environments, and analytics systems to identify potential security risks and common attack surfaces.
 - Analyzed system and user activity data to detect trends, anomalies, and indicators of social engineering–based threats such as phishing.

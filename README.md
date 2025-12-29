@@ -41,19 +41,19 @@ Cybersecurity enthusiast with hands-on experience in vulnerability assessment, p
 
 ## Experience  
 
-### Digital Marketing Intern – Brain Machine  
-*April 2025 – September 2025*  
-- Ensured data privacy and compliance while handling user data, building strong awareness of security best practices (GDPR/CCPA).  
-- Worked with web platforms, CMS, and analytics tools, gaining technical exposure to systems that are common security targets.  
-- Conducted data analysis to identify trends and anomalies, and developed insights into how social engineering tactics parallel phishing and cyber threats.  
+### Cyber Security Intern – Brain Machine
+April 2025 – September 2025
+- Assisted in maintaining data privacy and regulatory compliance (GDPR/CCPA), reinforcing secure handling of sensitive user information.
+- Monitored web platforms, CMS environments, and analytics systems to identify potential security risks and common attack surfaces.
+- Analyzed system and user activity data to detect trends, anomalies, and indicators of social engineering–based threats such as phishing.
+- Supported documentation of security practices, incident observations, and risk mitigation processes.
 
-**Key Skills Gained:**  
-- Data Privacy & Security Awareness  
-- Web & System Exposure  
-- Log/Anomaly Analysis  
-- Understanding of Social Engineering  
-- Technical Documentation  
-
+**Key Skills Gained:
+- Data Privacy & Compliance (GDPR/CCPA)
+- Web Application & System Security Exposure
+- Log Monitoring & Anomaly Detection
+- Social Engineering & Phishing Awareness
+- Security & Technical Documentation
 ---
 
 ## Certifications  

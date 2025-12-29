@@ -28,7 +28,7 @@
 ---
 
 ## Summary  
-Cybersecurity enthusiast with hands-on experience in vulnerability assessment, penetration testing, and cloud security. Skilled in Wireshark, Nmap, Kali Linux, and machine learning applications in security. Completed a Digital Marketing Internship, gaining expertise in data privacy, web systems, and anomaly detection. Proficient in creating reports and presentations to communicate complex concepts effectively.
+Cybersecurity enthusiast with hands-on exposure to data privacy, compliance, and security analysis across web-based systems. Experienced in identifying potential risks, analyzing user and system activity, and understanding social engineering and phishing threats. Familiar with tools such as Wireshark, Nmap, and Kali Linux, with foundational knowledge of vulnerability assessment, penetration testing, and cloud security. Strong in technical documentation and communicating security concepts clearly.
 
 ---
 

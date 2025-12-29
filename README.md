@@ -65,7 +65,7 @@ Key Skills Gained:
 ## Education  
 **University of Science and Technology Chittagong**  
 BSc in Computer Science & Engineering  
-*January 2022 – Present*  
+*January 2022 – December 2025*  
 
 ---
 
